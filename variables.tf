@@ -17,7 +17,7 @@ variable "groups" {
 }
 
 variable "name" {
-  description = "Name of policy to be seen on console"
+  description = "The name of the policy"
   type        = string
   default     = ""
 }
