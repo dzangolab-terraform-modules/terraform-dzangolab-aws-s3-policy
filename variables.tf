@@ -1,7 +1,13 @@
-variable "bucket_arns" {
+variable "buckets" {
   default     = []
   description = "ARNs of buckets to add to the policy"
   type        = list(string)
+}
+
+variable "description" {
+  description = "The description of the policy"
+  type        = string
+  default     = "IAM Policy"
 }
 
 variable "groups" {
@@ -10,9 +16,16 @@ variable "groups" {
   type        = list(string)
 }
 
-variable "policy_name" {
+variable "name" {
   description = "Name of policy to be seen on console"
   type        = string
+  default     = ""
+}
+
+variable "path" {
+  description = "The path of the policy in IAM"
+  type        = string
+  default     = "/"
 }
 
 variable "users" {
